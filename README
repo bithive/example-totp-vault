@@ -1,0 +1,14 @@
+# Usage
+
+Starting the server requires providing the vault password:
+
+    $ ruby server.rb 
+    Enter the vault password:
+
+The server will not start if this does not match the password that was entered on the first run.  Without this step the secrets would have to be stored unencrypted, which is less than ideal.
+
+Since I can't start the server unattended I detach it using `screen`.  An Apache virtual host enforces authorization rules which allow administrators access to the web interface.
+
+Once the server is running, users can be added via the web interface.  When the username is submitted the resulting page displays their secret both as base-32 text and a QR code.  Removing a user is as simple as clicking their name from the home page.
+
+Servers which need to validate OTPs are allowed to access the `/check` method which accepts two parameters, `uid` and `otp` and returns a status code of 200 if the attempt is valid.  This makes it very easy to check a code from within other applications or scripts.
