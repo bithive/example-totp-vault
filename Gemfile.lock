@@ -1,0 +1,23 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    base32 (0.2.0)
+    gibberish (1.1.0)
+    highline (1.6.8)
+    rack (1.3.5)
+    rack-protection (1.1.4)
+      rack
+    sinatra (1.3.1)
+      rack (~> 1.3, >= 1.3.4)
+      rack-protection (~> 1.1, >= 1.1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    tilt (1.3.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  base32
+  gibberish
+  highline
+  sinatra

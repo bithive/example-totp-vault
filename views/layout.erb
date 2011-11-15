@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>The Secret Vault</title>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+      }
+      input.user {
+        margin: 0.25em;
+      }
+      p.key {
+        text-align: center;
+        margin: 1em;
+      }
+      div.qr {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 16px;
+        padding: 0;
+        width: 360px;
+        height: 390px;
+        margin: 0 auto 0 auto;
+        text-align: center;
+      }
+      div.qr img {
+        width: 340px;
+        height: 340px;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-unit">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

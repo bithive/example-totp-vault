@@ -1,0 +1,17 @@
+<h2>The Secret Vault</h2>
+<h4>New member</h4>
+<form method="post" action="/insert" class="form-stacked">
+  <div class="clearfix">
+    <label for="uid">Username:</label>
+    <div class="input">
+      <input type="text" name="uid" autocomlpete="off"/> <input type="submit" value="Add" class="primary btn"/>
+    </div>
+  </div>
+</form>
+
+<h4>Existing members</h4>
+<form method="post" action="/delete">
+  <% @members.each do |uid| %>
+    <input type="submit" name="uid" value="<%= uid %>" onclick="return confirm('Are you sure?')" class="user danger btn"/>
+  <% end %>
+</form>
